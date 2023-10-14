@@ -7,7 +7,6 @@ const getNotes = function () {
 
 const addNote =  (title, body) => {
     const notes = loadNotes()
-   // const duplicateNotes = notes.filter( (note) => note.title === title)
     const duplicateNote = notes.find(note => notes.title === title)
     if (!duplicateNote) {
         notes.push({
@@ -48,7 +47,7 @@ const removeNotes = (title)=>{
     }else{
         console.log(chalk.red.inverse('No note found!'))
     }
-   
+   //filter method used here to remove note
 }
 
 const listNotes = (notes)=>{
@@ -69,7 +68,6 @@ const listNotes = (notes)=>{
         }else{
             console.log(chalk.red.inverse('Note not found!'))
         }
-
 
    }
 
